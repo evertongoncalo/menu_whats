@@ -1,0 +1,441 @@
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('/fonts/Poppins-Medium.otf');
+}
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('/fonts/Poppins-Regular.otf');
+}
+
+.root {
+    --color-background: #fffdf7 ;
+    --color-black: #212121;
+    --color-text: #4f4f4f;
+    --color-text-alt: #90908e;
+    --color-primary: #ffbf00;
+    --color-secondary: #fff2cc;
+    --color-white: #ffffff;
+    --color-red: #e74c3c;
+    --color-green: #2ecc71;
+    --color-separate: #cccccc;
+
+
+}
+.color-primary {
+    color: #ffbf00;
+}
+
+
+html, body {
+    background-color: #fffdf7;
+    font-family: 'PoppinsRegular', 'Rubik', sans-serif !important;
+    color: #4f4f4f;
+}
+
+
+b {
+    font-family: 'PoppinsMedium', 'Rubik', sans-serif !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+a.navbar-brand {
+    margin-left: -25px;
+}
+
+.nav-link {
+    color:#212121 !important;
+    padding-left: 35px!important;
+    padding-right: 35px!important;
+}
+
+
+.btn-white {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 15px 25px;
+    font-size: 20px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0,0, 0.1);
+    margin-left: 15px;
+}
+
+
+
+.btn-white:hover{
+    background-color: #ffbf00!important;
+}
+
+
+.btn-icon .icon {
+    display: inline-block;
+    color: #212121;
+    background-color: #ffbf00;
+    width: 45px;
+    height: 45px;
+    right: 10px;
+    margin-top: -8px;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 6px;
+}
+
+
+.banner {
+    padding-top: 110px;
+    padding-bottom: 220px;
+}
+
+.text-banner {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.text-banner h1{
+    color: #212121;
+    font-size: 60px;
+
+}
+
+.text-banner p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.btn-yellow {
+    background-color: #ffbf00;
+    color: #ffffff !important;
+    border-radius: 20px;
+    padding: 15px 25px;
+    font-size: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0,0, 0.1);
+    
+}
+.btn-yellow:hover {
+    color: #ffbf00 !important;
+    font-weight:bold;
+}
+
+.btn-icon-left {
+    padding-left: 70px;
+
+}
+
+.btn-icon-left span.icon-left {
+    display: inline-block;
+    color: #ffffff;
+    background-color:#ffbf00 ;
+    width: 40px;
+    height: 45px;
+    position: absolute;
+    margin-left: -60px;
+    margin-top: -8px;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.btn-sm {
+    padding: 9px 15px !important;
+    border-radius: 15px !important;
+    font-size: 15px !important;
+}
+.btn-social {
+    width: 50px;
+}
+
+.card-banner {
+    height: 450px;
+    width: 450px;
+    border-radius: 170px;
+    background-color: #f2c53e;
+    right: 0;
+    top: -80px;
+    position: absolute;
+}
+
+.img-banner img{
+    position:absolute;
+    width: 570px;
+    top: 30px;
+    right: 15px;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-size: 20px;
+    box-shadow:0 10px 15px -3px rgba(0, 0,0, 0.1)!important;
+    border: none !important; 
+}
+
+.card-case {
+    width: 350px;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    bottom: -75px;
+}
+
+.card-case-name {
+    position: absolute;
+    font-size: 12px;
+    color: #ffbf00;
+    right: 20px;
+    bottom: 10px;
+}
+
+
+.services {
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+
+.hint-title {
+    color: #ffbf00;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+
+.title {
+    color: #212121;
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.card-icon{
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text {
+    color: #90908e;
+    font-size: 15px;
+    padding: 0 30px;
+}
+
+.card-text p {
+    font-size: 22px;
+    color: #212121;
+    margin-bottom: 10px;
+}
+
+.background-services {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 500px;
+    background-image: url("/img/bg-icons-2.png");
+}
+
+
+
+
+.menu {
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.container-menu {
+    margin-bottom: 40px;
+}
+
+.card-item {
+    width: 320px;    
+    text-align: center;
+}
+
+.card-item .img-product img {
+    width: 100%;
+    border-radius: 11px;
+}
+
+.card-item .title-product {
+    color: #212121;
+    text-overflow: ellipsis; /*Fazer as reticencias uando o texto não couber na div*/
+    white-space: nowrap;
+    overflow: hidden;
+    height: 40px;
+    margin-bottom: 0;
+}
+
+.card-item .price-product {
+    font-size: 24px;
+    color: #ffbf00;
+    text-shadow: 1px px 1px #212121;
+}
+
+
+.card-item .add-to-cart {
+    display: none;
+    text-align: center;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-minus {
+    color: #000;
+    padding: 5px 7px;
+    border: 2px solid #000;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-plus {
+    color: #000;
+    padding: 5px 7px;
+    border: 2px solid #000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.add-items {
+    color: #000;
+    padding: 2px 15px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    font-size: 18px;
+}
+
+.btn-add {
+    border: 2px solid #000;
+    font-size: 16px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #000;
+    margin-left: 15px;
+
+}
+
+/* COR DO HOVER DO PRODUCTO */
+
+.card-item:hover {
+    background-color: #ffbf00;
+}
+
+.card-item:hover .title-product {
+    color: #fff;
+}
+
+.card-item:hover .price-product {
+    color: #000;
+}
+
+.card-item:hover .add-to-cart {
+    display: flex;
+}
+
+.testimonials {
+    padding-top: 100px;
+    padding-bottom: 150px;
+
+}
+
+.card-testimonials{
+    height: 390px;
+    width: 390px;
+    border-radius: 120px;
+    background-color: #fff2cc;
+    position: absolute;
+}
+
+.container-depoiment {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    
+}
+
+.depoiment {
+    margin-top: 70px;
+    
+}
+
+.img-depoiment{
+    width: 65px;
+    height: 65px;
+    background-color: #fff;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 15px;
+}
+
+#depoiment-1 .img-depoiment {
+    background-image: url('/img/diego.jpg');
+    background-size: cover;
+}
+#depoiment-2 .img-depoiment {
+    background-image: url('/img/ana.jpg');
+    background-size: cover;
+}
+
+#depoiment-3 .img-depoiment {
+    background-image: url('/img/joao.jpg');
+    background-size: cover;
+}
+
+
+.name-depoiment {
+    color: #212121;
+    font-size: 22px;
+    margin-bottom: 15px;
+
+}
+
+.rate-depoiment {
+    color: #ffbf00;
+}
+
+.rate-depoiment span {
+    color: #000;
+}
+
+.depoiment-text {
+    display: flex;
+    font-size: 16px;
+    color: #212121;
+}
+
+.depoiment-text i{
+    font-size: 35px;
+    color: #ffbf00;
+}
+
+.depoiment-text i:first-child{
+    padding-left: 10px;
+    padding-right: 35px;
+}
+
+.depoiment-text i:last-child{
+    display: flex;
+    padding-left: 45px;
+    align-items: end;
+    justify-content: center;
+}
+
+.background-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 500px;
+    background-image: url("/img/bg-icons-1.png");
+    pointer-events: none;  /* #Faz com que não tenha evento de mouse, resolução para o problema de não aparecer hover */
+}
