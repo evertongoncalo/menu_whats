@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Online WhatsApp</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/fontawesome.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+
 <body>
     <section class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg pl-0 pr-0 col-one">
-                <a class="navbar-brand" href="" >
+                <a class="navbar-brand" href="">
                     <img src="/img/logo.png" width="160" class="img-logo ">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarNavDropdown">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navBarNavDropdown">
                         <span class="">
                             <i class="fas fa-bars"></i>
 
@@ -28,7 +33,7 @@
                             <li class="nav-item"><a href="#testimonials" class="nav-link"><b>Testimonials</b></a></li>
                         </ul>
                         <a class="btn btn-white btn-icon">
-                            Cart 
+                            Cart
                             <span class="icon"><i class="fa fa-shopping-bag"></i></span>
                         </a>
                     </div>
@@ -54,24 +59,24 @@
                     <a class="btn btn-sm btn-white btn-social mt-4 mr-3"><i class="fab fa-instagram"></i></a>
                     <a class="btn btn-sm btn-white btn-social mt-4 mr-3"><i class="fab fa-facebook"></i></a>
                     <a class="btn btn-sm btn-white btn-social mt-4 mr-3"><i class="fab fa-whatsapp"></i></a>
-                    
+
                 </div>
                 <div class="col-6 position-relative">
                     <div class="card-banner "></div>
                     <div class="d-flex img-banner">
-                        <img src="/img/burguer.png" alt="">                   
-                        
+                        <img src="/img/burguer.png" alt="">
+
                     </div>
                     <div class="card card-case">Fast Delivery and very tasty.</div>
                     <span class="card-case-name"><b>Owen Hart</b></span>
                 </div>
-                
+
 
             </div>
         </div>
 
     </section>
-    <section class="Services">
+    <section id="services" class="Services">
         <div class="container">
 
             <div class="background-services"></div>
@@ -110,112 +115,49 @@
                     </div>
 
                 </div>
-                       
+
             </div>
         </div>
 
     </section>
-    <section class="menu">
+    <section id="menu" class="menu">
         <div class="background-menu"></div>
-        
-        <div class="container">          
-            
+
+        <div class="container">
+
             <div class="row">
-                
+
                 <div class="col-12 text-center mb-5">
                     <span class="hint-title"><b>Menu</b></span>
                     <h1 class="title"><b>good food brings good people</b></h1>
                 </div>
                 <div class="col-12 container-menu">
-                    <a href="" class="btn btn-white btn-md mr-3"><i class="fas fa-hamburger"></i>&nbsp;Burgers</a>
-                    <a href="" class="btn btn-white btn-md mr-3"><i class="fas fa-pizza-slice"></i>&nbsp;Pizza</a>
-                    <a href="" class="btn btn-white btn-md mr-3"><i class="fas fa-drumstick-bite"></i>&nbsp;BBQ</a>
-                    <a href="" class="btn btn-white btn-md mr-3"><i class="fas fa-bacon"></i>&nbsp;Steaks</a>
-                    <a href="" class="btn btn-white btn-md mr-3"><i class="fas fa-cocktail"></i>&nbsp;Drinks</a>
-                    <a href="" class="btn btn-white btn-md mr-3"><i class="fas fa-ice-cream"></i>&nbsp;Desserts</a>
+                    <a id="menu-burgers" class="btn btn-white btn-md mr-3 active" onclick="menu.methods.obterItemsMenu('burgers')"><i class="fas fa-hamburger"></i>&nbsp;Burgers</a>
+                    <a id="menu-pizzas" class="btn btn-white btn-md mr-3 active" onclick="menu.methods.obterItemsMenu('pizzas')"><i class="fas fa-pizza-slice"></i>&nbsp;Pizza</a>
+                    <a id="menu-churrasco" class="btn btn-white btn-md mr-3 active" onclick="menu.methods.obterItemsMenu('churrasco')"><i class="fas fa-drumstick-bite"></i>&nbsp;BBQ</a>
+                    <a id="menu-steaks" class="btn btn-white btn-md mr-3 active" onclick="menu.methods.obterItemsMenu('steaks')"><i class="fas fa-bacon"></i>&nbsp;Steaks</a>
+                    <a id="menu-bebidas" class="btn btn-white btn-md mr-3 active" onclick="menu.methods.obterItemsMenu('bebidas')"><i class="fas fa-cocktail"></i>&nbsp;Drinks</a>
+                    <a id="menu-sobremesas" class="btn btn-white btn-md mr-3 active" onclick="menu.methods.obterItemsMenu('sobremesas')"><i class="fas fa-ice-cream"></i>&nbsp;Desserts</a>
                 </div>
                 <div class="col-12">
                     <div class="row" id="menuItems">
 
-                        <div class="col-3 mb-5">
-                            <div class="card card-item">
-                                <div class="img-product">
-                                    <img src="/img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg" alt="">
-                                </div>
-                                <p class="title-product mt-4">Cheeseburguer with brie cheese</p>
-                                <p class="price-product">€4.50</p>
-                                <div class="add-to-cart">
-                                    <span class="btn-minus"><i class="fas fa-minus"></i></span>
-                                    <span class="add-items">0</span>
-                                    <span class="btn-plus"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fa fa-shopping-bag"></i></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 mb-5">
-                            <div class="card card-item">
-                                <div class="img-product">
-                                    <img src="/img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg" alt="">
-                                </div>
-                                <p class="title-product mt-4">Cheeseburguer with brie cheese</p>
-                                <p class="price-product">€4.50</p>
-                                <div class="add-to-cart">
-                                    <span class="btn-minus"><i class="fas fa-minus"></i></span>
-                                    <span class="add-items">0</span>
-                                    <span class="btn-plus"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fa fa-shopping-bag"></i></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 mb-5">
-                            <div class="card card-item">
-                                <div class="img-product">
-                                    <img src="/img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg" alt="">
-                                </div>
-                                <p class="title-product mt-4">Cheeseburguer with brie cheese</p>
-                                <p class="price-product">€4.50</p>
-                                <div class="add-to-cart">
-                                    <span class="btn-minus"><i class="fas fa-minus"></i></span>
-                                    <span class="add-items">0</span>
-                                    <span class="btn-plus"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fa fa-shopping-bag"></i></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 mb-5">
-                            <div class="card card-item">
-                                <div class="img-product">
-                                    <img src="/img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg" alt="">
-                                </div>
-                                <p class="title-product mt-4">Cheeseburguer with brie cheese</p>
-                                <p class="price-product">€4.50</p>
-                                <div class="add-to-cart">
-                                    <span class="btn-minus"><i class="fas fa-minus"></i></span>
-                                    <span class="add-items">0</span>
-                                    <span class="btn-plus"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fa fa-shopping-bag"></i></span>
-
-                                </div>
-                            </div>
-                        </div>
+                        
 
                     </div>
-                </div>   
+                </div>
                 <div class="col-12 text-center">
-                    <a class="btn btn-white btn-sm">See more</a>
-                </div>             
+                    <a id="btn-seemore" onclick="menu.methods.seeMore()" class="btn btn-white btn-sm">See more</a>
+                </div>
             </div>
-            
+
         </div>
 
     </section>
-    <section class="testimonials">
+    <section id="testimonials" class="testimonials">
         <div class="background-menu"></div>
         <div class="container">
-            <div class="row">                
+            <div class="row">
                 <div class="col-5 position-relative">
                     <div class="card-testimonials"></div>
                     <div class="d-flex img-banner">
@@ -240,10 +182,13 @@
                             </div>
                             <p class="depoiment-text">
                                 <i class="fas fa-quote-left"></i>
-                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugit excepturi debitis est inventore totam amet, sit ea omnis quibusdam aut rem, pariatur consequuntur! Id magni non esse consequuntur at?</span>
-                                <i class="fas fa-quote-right"></i></p>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugit
+                                    excepturi debitis est inventore totam amet, sit ea omnis quibusdam aut rem, pariatur
+                                    consequuntur! Id magni non esse consequuntur at?</span>
+                                <i class="fas fa-quote-right"></i>
                             </p>
-                            
+                            </p>
+
                         </div>
                         <div class="depoiment hidden" id="depoiment-2">
                             <div class="container-depoiment">
@@ -259,8 +204,11 @@
                             </div>
                             <p class="depoiment-text">
                                 <i class="fas fa-quote-left"></i>
-                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugit excepturi debitis est inventore totam amet, sit ea omnis quibusdam aut rem, pariatur consequuntur! Id magni non esse consequuntur at?</span>
-                                <i class="fas fa-quote-right"></i></p>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugit
+                                    excepturi debitis est inventore totam amet, sit ea omnis quibusdam aut rem, pariatur
+                                    consequuntur! Id magni non esse consequuntur at?</span>
+                                <i class="fas fa-quote-right"></i>
+                            </p>
                             </p>
 
                         </div>
@@ -278,8 +226,11 @@
                             </div>
                             <p class="depoiment-text">
                                 <i class="fas fa-quote-left"></i>
-                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugit excepturi debitis est inventore totam amet, sit ea omnis quibusdam aut rem, pariatur consequuntur! Id magni non esse consequuntur at?</span>
-                                <i class="fas fa-quote-right"></i></p>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugit
+                                    excepturi debitis est inventore totam amet, sit ea omnis quibusdam aut rem, pariatur
+                                    consequuntur! Id magni non esse consequuntur at?</span>
+                                <i class="fas fa-quote-right"></i>
+                            </p>
                             </p>
 
                         </div>
@@ -298,15 +249,247 @@
 
     </section>
     <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card-secondary">
+                        <div class="row">
+                            <div class="col-7">
+                                <span class="hint-title"><b>Reservation</b></span>
+                                <h1 class="title"><b>Wanna to do reservation?</b></h1>
+                                <p class="pr-5">
+                                    Send us a message just click on the bottom below. <br>
+                                    Book your date and time easily.
+                                </p>
+                                <a class="btn btn-yellow">Booking</a>
+                            </div>
+                            <div class="col-5 position-relative">
+                                <div class="card-booking"></div>
+                                <div class="d-flex img-banner">
+                                    <img src="/img/icone-reserva.svg" alt="booking">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-3 container-logo-footer">
+                    <img class="logo-footer" src="/img/logo.png" alt="">
+                </div>
+                <div class="col-6 container-text-footer">
+                    <p class="mb-0"><b>Menu Online </b>&copy; All rights reserved.</p>
+                </div>
+                <div class="col-3 container-socials-footer">
+                    <a class="btn btn-sm btn-white btn-social mr-3"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm btn-white btn-social mr-3"><i class="fab fa-facebook"></i></a>
+                    <a class="btn btn-sm btn-white btn-social mr-3"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
 
     </footer>
 
-<script src="js/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="js/modernizr-3.5.0.min.js"></script>
+    <div class="modal-full hidden" id="modal-cart">
+        <div class="modal-header">
+            <div class="container">
+                <a class="btn btn-white btn-sm close">Close</a>
+                <div class="steps">
+                    <div class="step step-1 active">1</div>
+                    <div class="step step-2">2</div>
+                    <div class="step step-3">3</div>
+                </div>
+                <p id="title-step" class="title-cart mt-4"><b>Your Cart:</b></p>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <div id="itemsCart" class="row mr-0 ml-0 hidden">
+                    <div class="col-12 cart-item">
+                        <div class="img-prod">
+                            <img src="/img/cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg"
+                                alt="">
+                        </div>
+                        <div class="info-prod">
+                            <p class="title-product"><b>Meatball</b></p>
+                            <p class="price-product"><b>€6.50</b></p>
+                        </div>
+                        <div class="add-to-cart">
+                            <span class="btn-minus"><i class="fas fa-minus"></i></span>
+                            <span class="add-items">0</span>
+                            <span class="btn-plus"><i class="fas fa-plus"></i></span>
+                            <span class="btn btn-remove"><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>           
+
+
+
+                <div id="deliveryCart" class="row mr-0 ml-0 hidden">
+                    <div class="col-4">
+                        <div class="form-group container-postcode position-relative">
+                            <label for="">Postcode</label>
+                            <input class="form-control" type="text" name="postcode" id="postcode">
+                            <a class="btn btn-yellow btn-sm"><i class="fas fa-search"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="col-8"></div>
+
+                    <div class="col-6 mt-3">
+                        <div class="form-group">
+                            <label for="">Address</label>
+                            <input class="form-control" type="text" name="address" id="address">
+                        </div>
+
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <div class="form-group">
+                            <label for="">State</label>
+                            <input class="form-control" type="text" name="state" id="state">
+                        </div>
+
+                    </div>
+
+                    <div class="col-2 mt-3">
+                        <div class="form-group">
+                            <label for="">Nr</label>
+                            <input class="form-control" type="text" name="number" id="number">
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="col-10 mt-3">
+                        <div class="form-group">
+                            <label for="">City</label>
+                            <input class="form-control" type="text" name="city" id="city">
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-2 mt-3">
+                        <div class="form-group ">
+                            <label for="">Country</label>
+                            <input class="form-control" type="text" name="number" id="number">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div id="summary" class="row mr-0 ml-0">
+                    <div class="col-12">
+                        <p class="title-cart mt-4"><b>Order Items:</b></p>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row" id="order-list-summary">
+                            
+                            <div class="cart-item summary">
+                                <div class="col-1 img-product-summary">
+                                    <img src="/img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg" alt="">
+                                </div>
+                                <div class="col-9 info-prod">
+                                    <p class="title-product-summary">
+                                        <b>Product name:</b>
+                                    </p>
+                                    <p class="price-product-summary">
+                                        <b>€4.50</b>
+                                    </p>
+                                </div>
+                                <div class="col-2 ">
+                                    <p class="product-quantity">
+                                        x<b>3</b>
+                                    </p>
+                                </div>                     
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p class="title-cart mt-4"><b>Delivery Address:</b></p>
+                    </div> 
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-1 img-map">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="col-11 info-product">
+                                <p class="address-text">
+                                    <b id="summary-address">ru a vbhgvhghkhhbk</b>
+                                </p>
+                                <p id="city-address" class="city-address">
+                                    Oiã - 54459-050
+                                </p>
+                            </div>
+
+                        </div>
+                        
+
+                    </div>           
+                        
+                    
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+        <div class="modal-footer">
+            <div class="container">
+                <div class="container-full text-right mb-4">
+                    <p class="mb-0">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">€ 0</span>
+                    </p>
+                    <p class="mb-0 text-delivery">
+                        <span><i class="fas fa-motorcycle"></i> Delivery:</span>
+                        <span id="delivery-costs">€ 5.50</span>
+                    </p>
+                    <p class="mb-0 text-total">
+                        <span>Total:</span>
+                        <span class="total" id="total"><b>€ 0</b></span>
+                    </p>
+                    <a class="btn btn-white float-right" id="btn-back" href="">Back</a>
+                    <a class="btn btn-yellow float-right" id="btn-order-next" href="">Next</a>
+                    <a class="btn btn-yellow float-right hidden" id="btn-order-address" href="">Summary</a>
+                    <a class="btn btn-yellow float-right hidden" id="btn-order-send" href="">Send Order</a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    
+    <script src="js/modernizr-3.5.0.min.js"></script>
 </body>
+
 </html>

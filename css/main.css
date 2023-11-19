@@ -67,6 +67,12 @@ a.navbar-brand {
     background-color: #ffbf00!important;
 }
 
+.btn-white.active{
+    background-color: #ffbf00;
+    border: none;
+
+}
+
 
 .btn-icon .icon {
     display: inline-block;
@@ -106,7 +112,7 @@ a.navbar-brand {
 }
 
 .btn-yellow {
-    background-color: #ffbf00;
+    background-color: #ffbf00 !important;
     color: #ffffff !important;
     border-radius: 20px;
     padding: 15px 25px;
@@ -127,7 +133,7 @@ a.navbar-brand {
 .btn-icon-left span.icon-left {
     display: inline-block;
     color: #ffffff;
-    background-color:#ffbf00 ;
+    background-color:#ffbf00 !important;
     width: 40px;
     height: 45px;
     position: absolute;
@@ -438,4 +444,304 @@ a.navbar-brand {
     height: 500px;
     background-image: url("/img/bg-icons-1.png");
     pointer-events: none;  /* #Faz com que não tenha evento de mouse, resolução para o problema de não aparecer hover */
+}
+
+
+.reservation {
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.card-secondary {
+    background-color: #fff2cc ;
+    border-radius: 70px;
+    padding: 90px;
+}
+
+.card-booking{
+    height: 320px;
+    width: 320px;
+    border-radius: 120px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: -25px;
+}
+
+.reservation .img-banner img {
+    width: 100%;
+}
+
+
+footer{
+    background-color: #fff2cc;
+}
+
+.logo-footer {
+    width: 150px;
+}
+
+.container-logo-footer, .container-text-footer, .container-socials-footer {
+    display: flex;
+    align-items: center;
+}
+
+.container-logo-footer {
+    justify-content: start;
+}
+
+.container-text-footer{
+    justify-content: center;
+}
+
+.container-socials-footer {
+    justify-content: end;
+}
+
+
+/*MODAL MENU */
+
+
+.modal-full{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px;
+    background-color: #fff;
+    z-index: 9990;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.modal-header {
+    padding-bottom: 20px;
+    
+}
+
+.modal-body {
+    flex: 1;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+.modal-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/*CARt*/
+
+.steps {
+    display: flex;
+}
+
+.step {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0,0, 0.1)!important;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.step::before{
+    content: "";
+    width: 20px;
+    background-color: #cccccc;
+    position: absolute;
+    height: 2px;
+    margin-left: 55px;
+}
+
+.step:last-child::before { /*Retira da ultima etapa*/
+    content: none;
+
+}
+
+.step.active, .step.active::before {
+    background-color: #ffbf00 !important;
+}
+
+.title-cart {
+    font-size: 20px;
+    color: #000;
+    
+}
+
+.close {
+    float: right !important;
+}
+
+.modal-full .cart-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cccccc ;
+
+}
+
+.modal-full .cart-item:last-child {
+    border-bottom: none;
+}
+
+
+.modal-full .img-prod img {
+    width: 120px;
+    border-radius: 11px;
+}
+
+.modal-full .title-product {
+    color: #000;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.modal-full .price-product {
+    color: #ffbf00;
+    font-size: 24px;
+    margin-bottom: 0;
+
+}
+
+.modal-full .info-prod {
+    flex: 1;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.modal-full .add-to-cart {
+    display: flex;
+    text-align: center;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+.btn-remove {
+    border: 2px solid #e74c3c;
+    font-size: 16px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #e74c3c;
+    margin-left: 15px;
+}
+
+.container-full {
+    padding-top: 20px;
+    border-top: 1px solid #cccccc;
+    float: right;
+}
+
+.container-full .text-delivery {
+    color: #cccccc;
+}
+
+.container-full .text-total {
+    color: #000;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.container-full .total {
+    color: #ffbf00;
+    font-size: 24px;
+}
+
+
+.form-control {
+    background-color: #fff !important;
+    color: #000 !important;
+    border-radius: 20px;
+    padding: 15px 25px;
+    font-size: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0,0, 0.1)!important;
+    border: none !important;
+
+}
+
+.container-postcode .form-control {
+    padding-right: 75px;
+
+}
+
+.container-postcode .btn {
+    position: absolute;
+    right: 25px;
+    top: 38px;
+}
+
+.img-product-summary img {
+    width: 60px;
+    border-radius: 11px;
+}
+
+
+.title-product-summary {
+    color: #000;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+.item-cart.summary {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.price-product-summary {
+    color: #ffbf00;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.product-quantity{
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 0;
+    float: right;
+}
+
+.img-map{
+    width: 50px;
+    height: 50px;
+    background-color: #fff2cc;
+    color: #000;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+}
+
+.address-text {
+    margin-bottom: 0;
+    color: #000;
+}
+
+.city-address {
+    margin-bottom: 0;
 }
