@@ -9,10 +9,19 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/fontawesome.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
+
+    <div class="container-messages" id="container-messages"></div>
+
+    <a class="btn-cart hidden" onclick="menu.methods.openCart(true)">
+        <div class="badge-total-cart">0</div>
+        <i class="fa fa-shopping-bag"></i>
+    </a>
+
     <section class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg pl-0 pr-0 col-one">
@@ -32,11 +41,12 @@
                             <li class="nav-item"><a href="#menu" class="nav-link"><b>Menu</b></a></li>
                             <li class="nav-item"><a href="#testimonials" class="nav-link"><b>Testimonials</b></a></li>
                         </ul>
-                        <a class="btn btn-white btn-icon">
+                        <a class="btn btn-white btn-icon position-relative" onclick="menu.methods.openCart(true)">                            
                             Cart
-                            <span class="icon"><i class="fa fa-shopping-bag"></i></span>
+                            <span class="icon">
+                                <div class="container-total-cart badge-total-cart hidden">0</div>
+                                <i class="fa fa-shopping-bag"></i></span>
                         </a>
-                    </div>
                 </a>
 
             </nav>
@@ -256,7 +266,7 @@
                         <div class="row">
                             <div class="col-7">
                                 <span class="hint-title"><b>Reservation</b></span>
-                                <h1 class="title"><b>Wanna to do reservation?</b></h1>
+                                <h1 class="title"><b>Wanna do a reservation?</b></h1>
                                 <p class="pr-5">
                                     Send us a message just click on the bottom below. <br>
                                     Book your date and time easily.
@@ -299,34 +309,20 @@
     <div class="modal-full hidden" id="modal-cart">
         <div class="modal-header">
             <div class="container">
-                <a class="btn btn-white btn-sm close">Close</a>
+                <a class="btn btn-white btn-sm close" onclick="menu.methods.openCart(false)">Close</a>
                 <div class="steps">
-                    <div class="step step-1 active">1</div>
+                    <div class="step step-1">1</div>
                     <div class="step step-2">2</div>
                     <div class="step step-3">3</div>
                 </div>
-                <p id="title-step" class="title-cart mt-4"><b>Your Cart:</b></p>
+                <p id="title-step" class="title-cart mt-4"><b></b></p>
             </div>
         </div>
         <div class="modal-body">
             <div class="container">
                 <div id="itemsCart" class="row mr-0 ml-0 hidden">
-                    <div class="col-12 cart-item">
-                        <div class="img-prod">
-                            <img src="/img/cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg"
-                                alt="">
-                        </div>
-                        <div class="info-prod">
-                            <p class="title-product"><b>Meatball</b></p>
-                            <p class="price-product"><b>€6.50</b></p>
-                        </div>
-                        <div class="add-to-cart">
-                            <span class="btn-minus"><i class="fas fa-minus"></i></span>
-                            <span class="add-items">0</span>
-                            <span class="btn-plus"><i class="fas fa-plus"></i></span>
-                            <span class="btn btn-remove"><i class="fa fa-times"></i></span>
-                        </div>
-                    </div>
+                    
+                    
                 </div>           
 
 
@@ -334,34 +330,35 @@
                 <div id="deliveryCart" class="row mr-0 ml-0 hidden">
                     <div class="col-4">
                         <div class="form-group container-postcode position-relative">
-                            <label for="">Postcode</label>
-                            <input class="form-control" type="text" name="postcode" id="postcode">
-                            <a class="btn btn-yellow btn-sm"><i class="fas fa-search"></i></a>
+                            <label>Postcode</label>
+                            <input class="form-controller" type="text" name="postcode" id="postcode">
+                            <a class="btn btn-yellow btn-sm" onclick="menu.methods.searchPostcode()">
+                                <i class="fas fa-search"></i>
+                            </a>
                         </div>
-
                     </div>
                     <div class="col-8"></div>
 
                     <div class="col-6 mt-3">
                         <div class="form-group">
-                            <label for="">Address</label>
-                            <input class="form-control" type="text" name="address" id="address">
+                            <label>Address</label>
+                            <input class="form-controller" type="text" name="address" id="address">
                         </div>
 
                     </div>
 
                     <div class="col-4 mt-3">
                         <div class="form-group">
-                            <label for="">State</label>
-                            <input class="form-control" type="text" name="state" id="state">
+                            <label>State</label>
+                            <input class="form-controller" type="text" name="state" id="state">
                         </div>
 
                     </div>
 
                     <div class="col-2 mt-3">
                         <div class="form-group">
-                            <label for="">Nr</label>
-                            <input class="form-control" type="text" name="number" id="number">
+                            <label>Nr</label>
+                            <input class="form-controller" type="text" name="number" id="number">
                         </div>
 
                     </div>
@@ -372,8 +369,8 @@
 
                     <div class="col-10 mt-3">
                         <div class="form-group">
-                            <label for="">City</label>
-                            <input class="form-control" type="text" name="city" id="city">
+                            <label>City</label>
+                            <input class="form-controller" type="text" name="city" id="city">
                         </div>
 
                     </div>
@@ -382,8 +379,8 @@
 
                     <div class="col-2 mt-3">
                         <div class="form-group ">
-                            <label for="">Country</label>
-                            <input class="form-control" type="text" name="number" id="number">
+                            <label>Country</label>
+                            <input class="form-controller" type="text" name="country" id="country">
                         </div>
 
                     </div>
@@ -405,10 +402,10 @@
                                 </div>
                                 <div class="col-9 info-prod">
                                     <p class="title-product-summary">
-                                        <b>Product name:</b>
+                                        <b></b>
                                     </p>
                                     <p class="price-product-summary">
-                                        <b>€4.50</b>
+                                        <b></b>
                                     </p>
                                 </div>
                                 <div class="col-2 ">
@@ -421,7 +418,7 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <p class="title-cart mt-4"><b>Delivery Address:</b></p>
+                        <p class="title-cart mt-4"><b></b></p>
                     </div> 
                     <div class="col-12">
                         <div class="row">
@@ -430,10 +427,9 @@
                             </div>
                             <div class="col-11 info-product">
                                 <p class="address-text">
-                                    <b id="summary-address">ru a vbhgvhghkhhbk</b>
+                                    <b id="summary-address"></b>
                                 </p>
                                 <p id="city-address" class="city-address">
-                                    Oiã - 54459-050
                                 </p>
                             </div>
 
@@ -458,20 +454,20 @@
                 <div class="container-full text-right mb-4">
                     <p class="mb-0">
                         <span>Subtotal:</span>
-                        <span id="subtotal">€ 0</span>
+                        <span id="subtotal"></span>
                     </p>
                     <p class="mb-0 text-delivery">
                         <span><i class="fas fa-motorcycle"></i> Delivery:</span>
-                        <span id="delivery-costs">€ 5.50</span>
+                        <span id="delivery-costs"></span>
                     </p>
                     <p class="mb-0 text-total">
                         <span>Total:</span>
-                        <span class="total" id="total"><b>€ 0</b></span>
+                        <span class="total" id="total"><b></b></span>
                     </p>
-                    <a class="btn btn-white float-right" id="btn-back" href="">Back</a>
-                    <a class="btn btn-yellow float-right" id="btn-order-next" href="">Next</a>
-                    <a class="btn btn-yellow float-right hidden" id="btn-order-address" href="">Summary</a>
-                    <a class="btn btn-yellow float-right hidden" id="btn-order-send" href="">Send Order</a>
+                    <a onclick="menu.methods.backStep()"class="btn btn-white float-right" id="btn-back">Back</a>
+                    <a onclick="menu.methods.loadAddress()" class="btn btn-yellow float-right" id="btn-order-next" >Next</a>
+                    <a onclick="menu.methods.summaryOrder()" class="btn btn-yellow float-right" id="btn-order-address" >Summary</a>
+                    <a class="btn btn-yellow float-right" id="btn-order-send" >Send Order</a>
 
                 </div>
 
